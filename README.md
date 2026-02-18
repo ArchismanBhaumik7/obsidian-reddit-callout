@@ -17,13 +17,15 @@ After that, you need to open the Vault in Obsidian, open Settings > Appearance >
 If it doesn't show up, try refreshing your snippets with the button beside "CSS Snippets", check what your config folder is set to, or restart Obsidian.
 
 ### Usage Format
-In Obsidian, use the !reddit modifier inside the callout definition to activate this snippet.
+In Obsidian, use the `!reddit` modifier inside the callout definition to activate this snippet.
 
-It uses the consecutive paragraphs in your callout (the <p></p> tags) to identify and target the different components.
+It uses the consecutive paragraphs in your callout (the `<p></p>` tags) to identify and target the different components.
 
 #### Important
 I **highly recommend** that you copy the example callout from below and put it into your **Templates** folder as a file instead of trying to write it out entirely by yourself.
-This is because, to make the look of the Callout title similar to Reddit, a lot of nested tags were used in the title, making it difficult to type it out correctly every time you want this callout. 
+
+This is because, to make the look of the Callout title similar to Reddit, a lot of nested tags were used in the title, making it difficult to type it out correctly every time you want this callout.
+
 The easiest way would instead be to insert the callout as a template, then change the parts you want in it.
 
 ### Order of Content
@@ -38,6 +40,7 @@ The easiest way would instead be to insert the callout as a template, then chang
 #### Important
 Since it applies CSS modifiers on paragraphs, you ***must*** put line breaks inside the callout to separate paragraphs.
 A single newline is read as continuation of the same paragraph, so you need to add an extra newline after each section of the callout is complete.
+
 On Desktop, this is achieved by pressing Shift+Enter.
 On Mobile devices, there is usually a button to create a newline without breaking out of the callout. Alternatively, add a `>` in the new line and type there onwards.
 
@@ -71,6 +74,7 @@ Code: (For 2 Callouts)
 >60
 ```
 Output:
+
 <img width="794" height="591" alt="image" src="https://github.com/user-attachments/assets/f2bea1b4-07f9-488e-b16f-1b81de86aa99" />
 
 Code: (For 2 Callouts)
@@ -93,15 +97,20 @@ Code: (For 2 Callouts)
 >12
 ```
 Output:
+
 <img width="788" height="530" alt="image" src="https://github.com/user-attachments/assets/f8c34477-2923-427e-b3d2-36e740587794" />
 
 #### How to add your own flair colors
 Open the snippet file with any text editor or development environment (like VS Code).
+
 Scroll down to where there is a comment `Flair Color Variants based on Metadata`.
 
 Copy any of the CSS blocks under it and paste it below that block.
+
 Replace the value of `data-callout-metadata*=` to the name you want to give to the modifier for your custom flair, for example, `purple-f`, `silver-f`, etc.
+
 Change the values at `background` and `color` to the color of the flair pill and the flair text respectively.
+
 Et voilà! Now you can use your custom flair.
 
 ## Further Development

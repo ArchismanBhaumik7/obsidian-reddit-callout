@@ -52,7 +52,7 @@ You can add modifiers with a `|` after defining the callout, as [!reddit | mod1 
 4. `upvote` and `downvote` can optionally be used to change the vote pill.
 
 ### Examples
-Code:
+Code: (For 2 Callouts)
 ```
 > [!reddit| general flair upvote] <div><p><span>r/Obsidian</span><span>•</span><span>3 hours ago</span></p><p><span>u/Creator</span></p></div>
 > Meme
@@ -71,9 +71,9 @@ Code:
 >60
 ```
 Output:
-...
+<img width="794" height="591" alt="image" src="https://github.com/user-attachments/assets/f2bea1b4-07f9-488e-b16f-1b81de86aa99" />
 
-Code:
+Code: (For 2 Callouts)
 ```
 > [!reddit| general] <div><p><span>r/Obsidian</span><span>•</span><span>3 hours ago</span></p><p><span>u/Creator</span></p></div>
 > 
@@ -93,7 +93,16 @@ Code:
 >12
 ```
 Output:
-...
+<img width="788" height="530" alt="image" src="https://github.com/user-attachments/assets/f8c34477-2923-427e-b3d2-36e740587794" />
+
+#### How to add your own flair colors
+Open the snippet file with any text editor or development environment (like VS Code).
+Scroll down to where there is a comment `Flair Color Variants based on Metadata`.
+
+Copy any of the CSS blocks under it and paste it below that block.
+Replace the value of `data-callout-metadata*=` to the name you want to give to the modifier for your custom flair, for example, `purple-f`, `silver-f`, etc.
+Change the values at `background` and `color` to the color of the flair pill and the flair text respectively.
+Et voilà! Now you can use your custom flair.
 
 ## Further Development
 I made this snippet primarily for my own use, but decided to share it just in case someone would like something like this. As such, I am quite happy with how it has turned out to be and am probably not going to work on this too much. You are free to do what you want with this.
